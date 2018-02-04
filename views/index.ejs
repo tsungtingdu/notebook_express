@@ -32,12 +32,12 @@
           <td><%= notes[i].note %></td>
           <td>
             <form action="/edit/<%= notes[i]._id %>" method="GET">
-              <button type="submit">Edit</button>
+              <button class="pure-button pure-button-primary" type="submit">Edit</button>
             </form>
           </td>
           <td>
             <form action="/delete/<%= notes[i]._id %>" method="POST">
-              <button type="submit">Delete</button>
+              <button class="pure-button pure-button-primary" type="submit">Delete</button>
             </form>
           </td>
         </tr>

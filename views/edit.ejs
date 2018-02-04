@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
-<body>
-  <div class="edit_form_container">
-    <form action="/update/<%= note._id %>" method="POST">
-      <input type="text" value="<%= note.name %>" name="name"> 
-      <input type="text" value="<%= note.title %>" name="title">
-      <input type="text" value="<%= note.note %>" name="note">  
-      <button type="submit">Update</button>
-    </form>
-  </div>
-</body>
-</html>
+
+<div class="header"><h2>Update The Note</h2></div>
+<div>
+  <form class="pure-form" action="/update/<%= note._id %>" method="POST">
+    <input type="text" value="<%= note.name %>" name="name"><br>
+    <input type="text" value="<%= note.title %>" name="title"><br>
+    <input value="<%= note.note %>" name="note"><br>
+
+    <button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Update</button>
+  </form>
+</div>

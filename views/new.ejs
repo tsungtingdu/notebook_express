@@ -9,11 +9,17 @@
 <body>
   <div class="header"><h2>Create A Note</h2></div>
   <div class="form_container">
-    <form action="/create" method="POST">
-      <input type="text" placeholder="name" name="name">
-      <input type="text" placeholder="title" name="title">
-      <input type="text" placeholder="note" name="note">
-      <button type="submit">Create</button>
+    <form class="pure-form" action="/create" method="POST">
+      <fieldset class="pure-group">
+          <input type="text" class="pure-input-1-2" placeholder="name" name="name">
+      </fieldset>
+
+      <fieldset class="pure-group">
+          <input type="text" class="pure-input-1-2" placeholder="title" name="title">
+          <br>
+          <textarea class="pure-input-1-2" placeholder="note" name="note"></textarea>
+      </fieldset>
+      <button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Create</button>
     </form>
   </div>
 </body>
