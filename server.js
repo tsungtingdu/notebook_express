@@ -39,3 +39,6 @@ app.get('/new', notebook.new);
 
 // create
 app.post('/create', notebook.create);
+
+// delete
+app.post('/delete/:noteId', notebook.delete)

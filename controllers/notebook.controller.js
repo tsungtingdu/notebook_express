@@ -32,3 +32,12 @@ exports.create = function (req, res){
   });
 };
 
+
+
+// delete
+exports.delete = function(req, res){
+  Note.findByIdAndRemove(req.params.noteId, function (err, result) {
+    if (err) return console.log(err);
+    res.redirect("/");
+  });
+};
