@@ -21,6 +21,7 @@
             <th>Title</th>
             <th>Note</th>
             <th></th>
+            <th></th>
         </tr>
       </thead>
       <tbody>
@@ -29,6 +30,11 @@
           <td><%= notes[i].name %></td>
           <td><%= notes[i].title %></td>
           <td><%= notes[i].note %></td>
+          <td>
+            <form action="/edit/<%= notes[i]._id %>" method="GET">
+              <button type="submit">Edit</button>
+            </form>
+          </td>
           <td>
             <form action="/delete/<%= notes[i]._id %>" method="POST">
               <button type="submit">Delete</button>

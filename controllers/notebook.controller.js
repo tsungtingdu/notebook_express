@@ -32,7 +32,22 @@ exports.create = function (req, res){
   });
 };
 
+// edit
+exports.edit = function(req, res){
+  Note.findById(req.params.noteId, function (err, result){
+    if (err) return console.log(err);
+    res.render('edit.ejs', {note: result});
+  });
+};
 
+
+// update
+exports.update = function (req, res){
+  Note.findByIdAndUpdate(req.params.noteId, { $set: { name: req.body.name, title: req.body.title, note: req.body.note}}, { new: true }, function (err, result) {
+    if (err) return console.log(err);
+    res.redirect("/");
+  });
+};
 
 // delete
 exports.delete = function(req, res){

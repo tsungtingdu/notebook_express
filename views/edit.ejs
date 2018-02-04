@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div class="edit_form_container">
+    <form action="/update/<%= note._id %>" method="POST">
+      <input type="text" value="<%= note.name %>" name="name"> 
+      <input type="text" value="<%= note.title %>" name="title">
+      <input type="text" value="<%= note.note %>" name="note">  
+      <button type="submit">Update</button>
+    </form>
+  </div>
+</body>
+</html>
