@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="header"><h2>My Notebook</h2></div>
+  <div class="button_container">
+    <form action="/new" method="GET">
+      <button type="submit">Create New Note</button>
+    </form>
+  </div>
+  <div class="notes_container">
+    <table class="pure-table pure-table-horizontal">
+      <thead>
+        <tr>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% for(var i=0; i<notes.length; i++){ %>
+        <tr>
+          <td><%= notes[i].name %></td>
+          <td><%= notes[i].title %></td>
+          <td><%= notes[i].note %></td>
+        </tr>
+      <% } %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
+
+
+
+
